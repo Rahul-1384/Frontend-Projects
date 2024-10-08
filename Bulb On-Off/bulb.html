@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Web page</title>
+        <style>
+            #block{padding-top: 100px;
+                padding-left: 500px;
+            }
+            #switch1, #switch2{position: absolute;
+                width: 70px;
+                height: 70px;
+                background-color: black;
+                border-radius: 10px;
+                top: 190px;
+                left: 500px;
+                border-color: red;
+            }
+            img{position: absolute;
+                left: 620px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="block">
+            <div id="switch1" onclick="bulbon()"></div>
+            <img id="light" src="bulb off.jpg" width="200px" height="200px">
+            <div id="switch2" onclick="bulboff()" style="left: 870px; transform: scale(1.3);transition-duration: 0.7s;"></div>
+        </div>
+        <script>
+            function bulbon(){
+                document.body.style.backgroundColor='black';
+                document.getElementById('light').src='incandescent-light-bulb-black-background-glowing-lightbulb-realistic-vector-illustration_261737-778.avif';
+                document.getElementById('switch1').style.boxShadow='0px 0px 10px 10px yellow';
+                document.getElementById('switch2').style.boxShadow='0px 0px 10px 10px yellow';
+                document.getElementById('light').style.boxShadow='0px 0px 10px 10px yellow';
+                document.getElementById('switch1').style.transform='scale(1.3)';
+                document.getElementById('switch2').style.transform='scale(0.8)';
+                document.getElementById('switch1').style.rotate='360deg';
+                document.getElementById('switch2').style.rotate='360deg';
+                document.getElementById('switch1').style.transitionDuration='0.7s';
+
+            }
+            function bulboff(){
+                document.body.style.backgroundColor='white';
+                document.getElementById('light').src='bulb off.jpg';
+                document.getElementById('switch2').style.boxShadow='0px 0px 10px 10px yellow';
+                document.getElementById('switch1').style.boxShadow='0px 0px 10px 10px yellow';
+                document.getElementById('light').style.boxShadow='0px 0px 10px 10px white';
+                document.getElementById('switch2').style.transform='scale(1.3)';
+                document.getElementById('switch1').style.transform='scale(0.8)';
+                document.getElementById('switch2').style.rotate='-360deg';
+                document.getElementById('switch1').style.rotate='-360deg';
+                document.getElementById('switch2').style.transitionDuration='0.7s';
+            }
+        </script>
+    </body>
+</html>
