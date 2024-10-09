@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>LYNX</title>
     <style>
         *,
         *::before,
@@ -13,100 +14,162 @@
             box-sizing: border-box;
         }
         .navbar-section{
+            padding-bottom: 20px;
+        }
+        .navbar-container{
+            max-width: 1200px;
+            margin: 0 auto;
             display: flex;
             flex-direction: row;
-            justify-content:space-around;
-            align-items: center;
+            justify-content: space-between;
         }
         .navbar-left-section{
             display: flex;
             justify-content: center;
             align-items: center;
         }
-        .vigneto p{
-            font-size: 10px;
-            font-weight: bold;
-        }
+        
         .navbar-right-section{
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 1rem;
+            font-size: 20px;
+            gap: 2rem;
         }
         .navbar-right-section a{
             text-decoration: none;
             color: black;
         }
-        .lines{
-            height: 15px;
-            border: 1px solid black;
-        }
-        .ultimate-section{
-            /* background-color: aqua; */
-            padding-top: 150px;
-            padding-bottom: 150px;
-        }
-        .ultimate-section-content{
+
+        .section1{
+            background-color: black;
+            color: white;
             display: flex;
+            gap: 4rem;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            max-width: 800px;
-            margin: 0 auto;
-            gap: 0.8rem;
+            padding: 220px;
         }
-        .ultimate-section-content .heading1{
+        .section1-first h1{
+            max-width: 500px;
+            font-size: 40px;
+        }
+        .section1-second{
+            display: flex;
+            gap: 100px;
+        }
+        .section1-second a{
+            text-decoration: none;
+            color: black;
             font-size: 16px;
             font-weight: bold;
-            color: white;
+            padding: 13px 50px;
+            border-radius: 50px;
+            background-color: red;
         }
-        .ultimate-section-content .heading2{
-            font-size: 45px;
-            font-weight: bold;
-            width: 500px;
-            text-align: center;
-            color: white;
+        #getintouch{
+            background-color: darkgoldenrod;
         }
-        .ultimate-section-content .heading3{
-            color: white;
-            text-align: center;
-        }
-        .section1{
-            background-color: aqua;
-        }
-        .section1-container{
-            padding-top: 80px;
-            padding-bottom: 80px;
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            gap: 4rem;
-        }
-        .section1-container-box1{
-            display: flex;
-            flex-direction: column;
-            gap: 0.4rem;
-        }
-        .section1-container-box1 p{
-            font-size: 14px;
-            font-weight: bold;
-        }
-        .section1-container-box1 h1{
-            font-size: 40px;
-            max-width: 500px;
-            color:goldenrod;
-        }
-        .section1-container-box2{
+        .section2{
+            padding: 100px;
             display: flex;
             flex-direction: row;
+            /* max-width: 1200px;
+            margin: 0 auto; */
+            justify-content: center;
+            align-items: center;
+        }
+        .section2-left{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        .section2-left p{
+            font-size: 40px;
+            max-width: 300px;
+        }
+        .section2-left .para{
+            max-width: 300px;
+        }
+        .section2-left .line{
+            border: 2px solid gold;
+            width: 100px;
+        }
+        .section2-left a{
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+            font-weight: bold;
+            max-width: 200px;
+            padding: 13px 30px;
+            text-align: center;
+            border-radius: 50px;
+            border: 2px solid gold;
+            margin-top: 1rem;
+        }
+        .section3{
+            padding: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             gap: 10rem;
         }
-        .section1-container-box2-left{
-            max-width: 600px;
+        #section3-para{
+            max-width: 230px;
         }
-        .section1-container-box2-right{
-            max-width: 600px;
+        .form-container #form-heading{
+            font-size: 17px;
+            font-weight: bold;
+        }
+        .textarea{
+            width: 300px;
+            padding: 10px;
+            font-weight: 100;
+        }
+        .form{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        #message{
+            width: 300px;
+            height: 100px;
+        }
+        .submit-btn{
+            padding: 10px 130px;
+            border-radius: 50px;
+            border: 1px solid gold;
+            background-color: gold;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .section3-right{
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+        .section3-right a{
+            color: black;
+        }
+        .section4{
+            display: flex;
+            justify-content: space-between;
+            padding: 100px 100px;
+            
+            background-color: gold;
+        }
+        .things{
+            padding: 300px;
+            background-image: url(things.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .things h1{
+            font-size: 40px;
+            text-align: center;
+            color: white;
         }
 
 
@@ -114,41 +177,90 @@
 </head>
 <body>
     <header class="navbar-section">
-        <div class="navbar-left-section">
-            <img src="logo.jpg" alt="" srcset="" width="100">
-            <div class="vigneto">
-                <h1>Vigneto</h1>
-                <p>VINEYARD & ESTATE VINERY</p>
+        <div class="navbar-container">
+            <div class="navbar-left-section">
+                <div>
+                    <h1>LYNX</h1>
+                </div>
             </div>
-        </div>
-        <div class="navbar-right-section">
-            <a href="#">Home</a>
-            <div class="lines"></div>
-            <a href="#">About</a>
-            <div class="lines"></div>
-            <a href="#">Events</a>
-            <div class="lines"></div>
-            <a href="#">Contact</a>
+            <div class="navbar-right-section">
+                <a href="#">Home</a>
+                <a href="#">Services</a>
+                <a href="#">Team</a>
+                <a href="#">Contact</a>
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
         </div>
     </header>
-    <section class="ultimate-section">
-        <div class="ultimate-section-content">
-            <div class="heading1">VIGNETO VINEYARDS</div>
-            <div class="heading2">The ultimate food and wine experience</div>
-            <div class="heading3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut blanditiis commodi mollitia vero praesentium neque dolorem, ex deserunt fugit non optio architecto voluptatem dolor obcaecati cumque velit cupiditate! Dignissimos.</div>
+    <section class="section1">
+        <div class="section1-first">
+            <h1>Finding <span style="color: darkgoldenrod;">creative</span> approaches to help your business growth</h1>
+        </div>
+        <div class="section1-second">
+            <a href="#" id="getintouch">Get in touch</a>
+            <a href="#">Meet the team</a>
         </div>
     </section>
-    <section class="section1">
-        <div class="section1-container">
-            <div class="section1-container-box1">
-                <p>WINE TASTING EXPERIENCE</p>
-                <h1>Every Empty Bottle Is Filled With A Great Story</h1>
-            </div>
-            <div class="section1-container-box2">
-                <div class="section1-container-box2-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam dolore quos aut obcaecati ullam incidunt in magni fugiat rem nemo neque itaque, minima esse similique repudiandae velit iusto fugit quo illum debitis possimus non deserunt voluptatem labore. Harum, distinctio exercitationem!</div>
-                <div class="section1-container-box2-right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus maiores doloremque architecto ad harum aperiam explicabo tempore suscipit quae nihil eos sequi aut laboriosam voluptatem, ut vitae consequuntur. Animi quibusdam dolores atque exercitationem laudantium pariatur, sint consequatur. Consequatur, qui commodi.</div>
+    <section class="section2">
+        <div class="section2-left">
+            <p><b>Set the bar</b> in your industry</p>
+            <div class="line"></div>
+            <div class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia nostrum a aliquam, assumenda quam illo!</div>
+            <a href="#">See our services</a>
+        </div>
+        <div class="section2-right">
+            <img src="image1.webp" alt="">
+        </div>
+    </section>
+    
+    <section class="things">
+        <h1>We make great things <span style="color: gold;">happen</span>.</h1>
+    </section>
+    
+    <section class="section3">
+        <div class="section2-left">
+            <p id="section3-para"><b>Get in touch</b> with us</p>
+            <div class="line"></div>
+            <div class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia nostrum a aliquam, assumenda quam illo!</div>
+            <div class="form-container">
+                <form class="form" action="">
+                    <div>
+                        <label id="form-heading" for="">First name</label><br>
+                        <input class="textarea" type="text">
+                    </div>
+                    <div>
+                        <label id="form-heading" for="">Last name</label><br>
+                        <input class="textarea" type="text">
+                    </div>
+                    <div>
+                        <label id="form-heading" for="">Email</label><br>
+                        <input class="textarea" type="email">
+                    </div>
+                    <div>
+                        <label id="form-heading" for="">Message</label><br>
+                        <input id="message" type="text">
+                    </div>
+                    <div>
+                        <button class="submit-btn">Submit</button>
+                    </div>
+                </form>
             </div>
         </div>
+        <div class="section3-right">
+            <img src="map.webp" alt="" width="400">
+            <a href="#">info@yourdomain.com</a>
+            <p>+91 3428754209</p>
+            <p>Lorem ipsum dolor sit amet<br> consectetur adipisicing elit.<br> Perspiciatis, voluptas.</p>
+        </div>
+    </section>
+    <section class="section4">
+        <h1>CNW.</h1>
+        <h1>Banks</h1>
+        <h1>Duke</h1>
+        <h1>Atlier</h1>
+        <h1>ACME</h1>
     </section>
 </body>
 </html>
