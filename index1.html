@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
     <style>
         *,
@@ -13,6 +14,7 @@
             box-sizing: border-box;
         }
         .navbar-section{
+            padding: 20px;
             display: flex;
             flex-direction: row;
             justify-content:space-around;
@@ -42,7 +44,9 @@
             border: 1px solid black;
         }
         .ultimate-section{
-            /* background-color: aqua; */
+            background-image: url("bg.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
             padding-top: 150px;
             padding-bottom: 150px;
         }
@@ -61,18 +65,19 @@
             color: white;
         }
         .ultimate-section-content .heading2{
-            font-size: 45px;
+            font-size: 60px;
             font-weight: bold;
-            width: 500px;
+            width: 600px;
             text-align: center;
             color: white;
         }
         .ultimate-section-content .heading3{
             color: white;
+            font-size: 18px;
             text-align: center;
+            max-width: 570px;
         }
         .section1{
-            background-color: aqua;
         }
         .section1-container{
             padding-top: 80px;
@@ -93,8 +98,8 @@
             font-weight: bold;
         }
         .section1-container-box1 h1{
-            font-size: 40px;
-            max-width: 500px;
+            font-size: 50px;
+            max-width: 700px;
             color:goldenrod;
         }
         .section1-container-box2{
@@ -104,10 +109,208 @@
         }
         .section1-container-box2-left{
             max-width: 600px;
+            font-size: 18px;
+            color: gray;
         }
         .section1-container-box2-right{
             max-width: 600px;
+            font-size: 18px;
+            color: gray;
         }
+        .section2{
+            background-image: url("scenery.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 200px;
+            color: white;
+        }
+        .section2-container p{
+            margin-bottom: 1rem;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .section2-container h1{
+            font-size: 70px;
+            max-width: 800px;
+            margin-bottom: 2rem;
+        }
+        .section2-container a{
+            padding: 14px 40px;
+            background-color: white;
+            text-decoration: none;
+            color: #b89c0c;
+            transition: all 0.4s;
+        }
+        .section2-container a:hover{
+            background-color: #b89c0c;
+            color: white;
+        }
+
+        .section3{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 160px;
+            gap: 10rem;
+        }
+        .section3-left{
+            max-width: 500px;
+        }
+        .section3-left .about{
+            color: #b89c0c;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .section3-left h1{
+            font-size: 50px;
+        }
+        .section3-right {
+            display: flex;
+            flex-direction: column;
+            max-width: 500px;
+            font-size: 18px;
+            gap: 1rem;
+            color: grey;
+        }
+
+        .section4{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            padding: 200px;
+            background-color: whitesmoke;
+        }
+        .section4 #grid-boxes{
+            background-image: url("wine1.avif");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .grid2 p{
+            font-size: 16px;
+            color: gray;
+            max-width: 300px; 
+            background-color: white;           
+        }
+        .grid2{
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 140px 100px;
+            gap: 1rem;
+        }
+        .grid2 h1{
+            font-size: 45px;
+            max-width: 400px;
+        }
+        .grid2 a{
+            margin-top: 1.5rem;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 14px 30px;
+            background-color: #b89c0c;
+        }
+        .grid3{
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .grid3-first{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .grid3-first p{
+            font-size: 16px;
+            color: #b89c0c;
+            font-weight: bold;
+            max-width: 300px; 
+            margin-left: 6rem;           
+        }
+        .grid3-first h1{
+            font-size: 45px;
+            margin-left: 6rem;           
+        }
+        #grid-image{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+        }
+        .grid-image-container{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;;
+        }
+        .grid4{
+            background-image: url("sc1.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .section5{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 160px;
+            background-image: url("sc1.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+        }
+        .section5 h1{
+            font-size: 60px;
+            max-width: 800px;
+            text-align: center;
+        }
+        .section5 .line{
+            border: 1px solid #b89c0c;
+            width: 100px;
+        }
+        footer{
+            padding: 50px;
+            background-color: rgb(38, 37, 37);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2.5rem;
+        }
+        .block2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+        }
+        .block2 a{
+            text-decoration: none;
+            color: white;
+        }
+        .lines{
+            height: 15px;
+            border: 1px solid gray;
+        }
+        .block3{
+            display: flex;
+            gap: 2rem;
+            font-size: 30px;
+        }
+        .block4{
+            display: flex;
+            justify-content: space-evenly;
+            color: white;
+        }
+        .block4 p{
+            margin: 20px;
+        }
+        
+
 
 
     </style>
@@ -115,11 +318,7 @@
 <body>
     <header class="navbar-section">
         <div class="navbar-left-section">
-            <img src="logo.jpg" alt="" srcset="" width="100">
-            <div class="vigneto">
-                <h1>Vigneto</h1>
-                <p>VINEYARD & ESTATE VINERY</p>
-            </div>
+            <img src="vignetto-wordmark-color.webp" alt="" srcset="" width="200">
         </div>
         <div class="navbar-right-section">
             <a href="#">Home</a>
@@ -135,7 +334,7 @@
         <div class="ultimate-section-content">
             <div class="heading1">VIGNETO VINEYARDS</div>
             <div class="heading2">The ultimate food and wine experience</div>
-            <div class="heading3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut blanditiis commodi mollitia vero praesentium neque dolorem, ex deserunt fugit non optio architecto voluptatem dolor obcaecati cumque velit cupiditate! Dignissimos.</div>
+            <div class="heading3">I’m a text box. Double click me to edit the text or to change the way I look. You can change the font, size, color, and so much more.</div>
         </div>
     </section>
     <section class="section1">
@@ -145,10 +344,93 @@
                 <h1>Every Empty Bottle Is Filled With A Great Story</h1>
             </div>
             <div class="section1-container-box2">
-                <div class="section1-container-box2-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam dolore quos aut obcaecati ullam incidunt in magni fugiat rem nemo neque itaque, minima esse similique repudiandae velit iusto fugit quo illum debitis possimus non deserunt voluptatem labore. Harum, distinctio exercitationem!</div>
-                <div class="section1-container-box2-right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus maiores doloremque architecto ad harum aperiam explicabo tempore suscipit quae nihil eos sequi aut laboriosam voluptatem, ut vitae consequuntur. Animi quibusdam dolores atque exercitationem laudantium pariatur, sint consequatur. Consequatur, qui commodi.</div>
+                <div class="section1-container-box2-left">I’m a text box. Double click me to edit the text or to change the way I look. You can change the font, size, color, and so much more. For advanced styling options, click on “more” located on the right hand side of the text editing menu. Click once to move me or to bring up the resize handles and Squeegee Tool.</div>
+                <div class="section1-container-box2-right">The resize handles allow you to make me any size you want. The Squeegee Tool, located in the top left of any selected object, helps you move all objects below it up or down to create or remove space.  </div>
             </div>
         </div>
     </section>
+    <section class="section2">
+        <div class="section2-container">
+            <p>Montepulciano, Italy</p>
+            <h1>Wine Pairs Nicely With Good Friends</h1>
+            <a href="#">UPCOMING EVENTS</a>
+        </div>
+    </section>
+    <section class="section3">
+        <div class="section3-left">
+            <div class="about">ABOUT</div>
+            <h1>Adventure Is The Best Way To Learn Something New</h1>
+        </div>
+        <div class="section3-right">
+            <p>I’m a text box. Double click me to edit the text or to change the way I look. You can change the font, size, color, and so much more.  For advanced styling options, click on “more” located on the right hand side of the text editing menu.</p>
+            <p>Click once to move me or to bring up the resize handles and Squeegee Tool. The resize handles allow you to make me any size you want.</p>
+            <p>I’m a text box. Double click me to edit the text or to change the way I look. You can change the font, size, color, and so much more.</p>
+        </div>
+    </section>
+    <section class="section4">
+        <div id="grid-boxes" class="grid1">
+
+        </div>
+        <div class="grid2">
+            <p style="color: #b89c0c; letter-spacing: 4px; font-weight: bold;">WINE TASTINGS</p>
+            <h1>Book Your Next Adventure</h1>
+            <p>I’m a text box. Double click me to edit the text or to change the way I look.</p>
+            <a href="#">BOOK A TOUR</a>
+        </div>
+        <div class="grid3">
+            <div class="grid3-first">
+                <p>EVENTS</p>
+                <h1>Our Events</h1>
+            </div>
+            <div class="grid-image-container">
+                <div id="grid-image">
+                    <img src="woodenglass.jpg" alt="" width="100" height="100">
+                    <div>
+                        <h1>Visit Wine Country</h1>
+                        <p style="max-width: 260px;">I’m a text box. Double click me to edit the text or to change the way I look.</p>
+                    </div>
+                </div>
+                <div id="grid-image">
+                    <img src="wine2.webp" alt="" width="105" height="100">
+                    <div>
+                        <h1>Wine Events</h1>
+                        <p style="max-width: 260px;">I’m a text box. Double click me to edit the text or to change the way I look.</p>
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+        <div class="grid4">
+
+        </div>
+    </section>
+    <section class="section5">
+        <h1>A New Adventure Is Waiting For You</h1>
+        <div class="line"></div>
+    </section>
+    <footer>
+        <div class="block1">
+            <img src="footerimage.webp" alt="">
+        </div>
+        <div class="block2">
+                <a href="#">Home</a>
+                <div class="lines"></div>
+                <a href="#">About</a>
+                <div class="lines"></div>
+                <a href="#">Events</a>
+                <div class="lines"></div>
+                <a href="#">Contact</a>
+        </div>
+        <div class="block3">
+            <i class="fa-brands fa-instagram" style="color: #b89c0c;"></i>
+            <i class="fa-brands fa-facebook" style="color: #b89c0c;"></i>
+            <i class="fa-brands fa-twitter" style="color: #b89c0c;"></i>
+        </div>
+        <div class="block4">
+            <p>© Your business name, all rights reserved.</p>
+            <p>Crafted lovingly with PageCloud</p>
+        </div>
+    </footer>
 </body>
 </html>
