@@ -12,10 +12,12 @@ body{
 
 .container{
     width: 795px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     margin: 0 auto;
+    display: flex;
+    
 }
-img{
+#image{
     border: 7px solid white;
     border-radius: 50%;
     width: 180px;
@@ -26,8 +28,8 @@ img{
 .left-section{
     background-color: rebeccapurple;
     padding: 45px;
-    width: fit-content;
-    border: 2px solid black;
+    width: 34%;
+    /* border: 2px solid black; */
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -39,13 +41,8 @@ img{
     letter-spacing: 0.2rem;
 }
 .line{
-    border: 0.09rem solid white;
-    margin-bottom: 0.8rem;
-}
-.leetcode{
-    background-image: url("./images/leetcode.svg");
-    width: 18px;
-    height: 18px;
+    /* border: 0.09rem solid white; */
+    margin-bottom: 0.6rem;
 }
 .contact{
     display: flex;
@@ -64,16 +61,45 @@ img{
 .mail{
     color: white;
     text-decoration: none;
+    max-width: 180px;
+    overflow-wrap: break-word;
 }
 .contact-leet{
     display: flex;
     flex-direction: row;
-    gap: 20rem;
+    /* align-items: center; */
+    gap: 0.4rem;
+}
+.leetcode{
+    width: 16px;
+    height: 16px;
 }
 .contact-info{
     display: flex;
     align-items: center;
     gap: 0.6rem;
-    width: 190px;
+    width: 210px;
+}
 
+.education-details{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+.first-section-education-details{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+.school-name{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.school-name ul{
+    padding-left: 0.9rem;
+}
+.right-section{
+    background-color: red;
+    width: 66%;
 }
