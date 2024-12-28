@@ -89,6 +89,7 @@ header a{
     font-weight: 500;
     background-color: #eee;
     letter-spacing: 3px;
+    transition: 0.5s;
 }
 .carousel .list .item .content button:nth-child(2){
     background-color: transparent;
@@ -195,4 +196,16 @@ header a{
 }
 .carousel .list .item:nth-child(1) .buttons{
     animation-delay: 1.1s;
+}
+
+.carousel .list .item .buttons button:nth-child(1):hover{
+    background-color: transparent;
+    color: #eee;
+    border: 1px solid #eee;
+    
+}
+.carousel .list .item .buttons button:nth-child(2):hover{
+    background-color: #ce893b;
+    color: #000;
+    border: none;
 }
