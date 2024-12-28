@@ -1,33 +1,36 @@
 const slides = document.querySelectorAll(".slide");
+console.log(slides)
 var counter = 0;
 
 slides.forEach((image,index) => {
     image.style.left = `${index * 100}%`
 });
 
-
 const goPrev = () => {
     if(counter > 0){
         counter--;
-        slideImage();
+        imageSlider();
     }else{
         counter = slides.length - 1;
-        slideImage();
+        imageSlider();
     }
 }
+
 
 const goNext = () => {
     if(counter < slides.length - 1){
         counter++;
-        slideImage();
+        imageSlider();
     }else{
         counter = 0;
-        slideImage();
+        imageSlider();
     }
 }
 
 
-const slideImage = () => {
-    slides.forEach((image) => {
+const imageSlider = () => {
+    slides.forEach((image,index) => {
+        console.log(index)
         image.style.transform = `translateX(-${counter * 100}%)`
-});}
+    });
+}
