@@ -3,7 +3,7 @@ console.log(slides)
 var counter = 0;
 
 slides.forEach((image,index) => {
-    image.style.left = `${index * 100}%`
+    image.style.top = `${index * 100}%`
 });
 
 const goPrev = () => {
@@ -31,6 +31,6 @@ const goNext = () => {
 const imageSlider = () => {
     slides.forEach((image,index) => {
         console.log(index)
-        image.style.transform = `translateX(-${counter * 100}%)`
+        image.style.transform = `translateY(-${counter * 100}%)`
     });
 }
