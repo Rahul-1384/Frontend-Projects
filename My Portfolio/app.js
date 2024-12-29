@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const observer = new IntersectionObserver((entries) => {
+    const hero = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             console.log(entry);
             if (entry.isIntersecting) {
@@ -13,6 +13,65 @@ document.addEventListener("DOMContentLoaded", () => {
     const content = document.querySelectorAll(".hero-animation");
     console.log(content);
     content.forEach((el) => {
-        observer.observe(el);
+        hero.observe(el);
     });
+
+
+
+
+    // Left Effect
+    const leftContent = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if(entry.isIntersecting){
+                entry.target.classList.add("leftEffect");
+            }else{
+                entry.target.classList.remove("leftEffect")
+            }
+        })
+    });
+
+    const left = document.querySelectorAll(".left")
+    left.forEach((el) => {
+        leftContent.observe(el)
+    });
+
+
+
+
+    // Right Effect
+    const rightContent = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if(entry.isIntersecting){
+                entry.target.classList.add("rightEffect");
+            }else{
+                entry.target.classList.remove("rightEffect")
+            }
+        })
+    });
+
+    const right = document.querySelectorAll(".right")
+    right.forEach((el) => {
+        rightContent.observe(el)
+    });
+
+
+
+
+    // Heading Effect
+    const headingContent = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if(entry.isIntersecting){
+                entry.target.classList.add("headingEffect");
+            }else{
+                entry.target.classList.remove("headingEffect")
+            }
+        })
+    });
+
+    const heading = document.querySelectorAll(".aboutme")
+    heading.forEach((el) => {
+        headingContent.observe(el)
+    });
+
+
 });

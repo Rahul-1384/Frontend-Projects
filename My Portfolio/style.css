@@ -5,6 +5,9 @@
     --black: #000;
     --highlight: rgb(200, 255, 0);
     --orange-blur: rgba(249, 138, 19, 0.9);
+    --grey: rgb(70, 70, 70);
+    --red: red;
+    --light-grey: rgb(229, 228, 228);
 }
 
 *,
@@ -17,7 +20,7 @@
 
 body{
     font-family: poppins;
-    background-color: var(--black);
+    /* background-color: var(--black); */
 }
 
 
@@ -25,7 +28,7 @@ body{
 
 .tracker{
     height: 2px;
-    background-color: var(--highlight);
+    background-color: var(--red);
     position: fixed;
     width: 100%;
     top: 0;
@@ -54,7 +57,7 @@ body{
     opacity: 0;
     filter: blur(20px);
     scale: 0.5;
-    transition: all 1s;
+    transition: all 0.7s;
 }
 .navbar a{
     margin-right: 40px;
@@ -88,9 +91,7 @@ body{
     filter: blur(0);
     scale: 1;
 }
-.navbar{
-    transition-delay: 0.5s;
-}
+
 
 .hero::before{
     content: "";
@@ -230,6 +231,232 @@ b{
 
 
 
+
+
+
+
 .about{
-    height: 800px;
+    max-width: 1140px;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 240px;
+    display: flex;
+    flex-direction: column;
+    gap: 5.5rem;
+}
+.about .below{
+    display: flex;
+    justify-content: center;
+    gap: 4.5rem;
+}
+
+
+.about .heading{
+    font-size: 40px;
+    text-align: center;
+    color: var(--black);
+    letter-spacing: 2px;
+    word-spacing: 5px;
+}
+.aboutme{
+    opacity: 0;
+    transform: translateY(120px);
+    transition: all 1s;
+}
+.headingEffect{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.about .details{
+    display: flex;
+    gap: 1.7rem;
+    width: fit-content;
+}
+.about .below .details .ask{
+    width: 100px;
+    font-weight: bold;
+    font-size: 16px;
+}
+.about .below .details .ans{
+    width: 200px;
+    font-size: 16px;
+    color: var(--grey);
+}
+.about .details .ans p, .ask p{
+    padding-bottom: 30px;
+}
+
+.about .des{
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    word-spacing: 7px;
+}
+.about .des p:nth-child(2),
+.about .des p:nth-child(3){
+    color: var(--grey);
+}
+.about .des p:nth-child(2){
+    padding-bottom: 20px;
+}
+.about .des .hello{
+    font-size: 30px;
+}
+.about .below .des .social-media{
+    display: flex;
+    gap: 1rem;
+}
+.about .below .des .social-media a{
+    color: black;
+    font-size: 25px;
+    transition: all 0.5s;
+}
+.about .below .des .social-media a:hover{
+    color: var(--orange-blur);
+    font-size: 25px;
+}
+.right{
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all 0.7s;
+}
+.rightEffect{
+    opacity: 1;
+    transform: translateX(0);
+}
+/* .right:nth-child(2){
+    transition-delay: 0.4s;
+}
+.right:nth-child(3){
+    transition-delay: 0.6s;
+} */
+
+.left{
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 0.3s;
+    transition-timing-function: linear;
+}
+
+.leftEffect{
+    opacity: 1;
+    transform: translateX(0);
+}
+.left:nth-child(1){
+    transition-delay: 0.2s;
+}
+.left:nth-child(2){
+    transition-delay: 0.3s;
+}
+.left:nth-child(3){
+    transition-delay: 0.4s;
+}
+.left:nth-child(4){
+    transition-delay: 0.5s;
+}
+
+
+
+
+.resume{
+    display: flex;
+    flex-direction: column;
+    max-width: 1140px;
+    /* background-color: red; */
+    margin: 100px auto;
+    justify-content: center;
+    align-items: center;
+}
+.resume .heading .aboutme{
+    font-size: 40px;
+    text-align: center;
+    color: var(--black);
+    letter-spacing: 2px;
+    word-spacing: 5px;
+}
+.resume .work-exp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: var(--grey); */
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-top: 10%;
+    padding-bottom: 30px;
+}
+
+.resume .work-exp .my-work, .education{
+    background-color: var(--light-grey);
+    padding: 5px 15px;
+    margin-bottom: 50px;
+    border-radius: 4px;
+    width: fit-content;
+    /* position: relative; */
+    text-align: center;
+    letter-spacing: 7px;
+    text-transform: uppercase;
+    word-spacing: 7px;
+    font-size: 18px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.resume .work-exp .education{
+    margin-top: 50px;
+}
+
+.resume .work-exp::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background-color: var(--light-grey);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.resume .work-exp .work-style-item{
+    display: flex;
+    flex-direction: column;
+    width: 47%;
+    position: relative;
+    gap: 1.5rem;
+}
+
+.resume .work-exp .left{
+    left: -27%;
+    text-align: end;
+}
+.resume .work-exp .right{
+    left: 27%;
+    text-align: start;
+}
+
+.resume .work-exp .logo{
+    padding: 10px;
+    font-size: 20px;
+    color: var(--white);
+    background-color: var(--orange-blur);
+    border-radius: 50%;
+}
+.resume .work-exp .left .logo{
+    position: absolute;
+    right: -11%;
+}
+.resume .work-exp .right .logo{
+    position: absolute;
+    left: -11%;
+}
+.resume .work-exp .role{
+    font-size: 24px;
+}
+.resume .work-exp .company{
+    font-size: 16px;
+    color: rgb(195, 195, 195);
+}
+.resume .work-exp .des{
+    font-size: 16px;
+    color: rgb(94, 94, 94);
 }
