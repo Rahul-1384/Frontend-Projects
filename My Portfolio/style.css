@@ -56,6 +56,7 @@ body{
     font-size: 20px;
     color: var(--black);
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
@@ -123,6 +124,7 @@ body{
 
 .navbar{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     font-size: 14px;
@@ -155,6 +157,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     opacity: 0;
@@ -185,6 +188,7 @@ body{
     margin: auto;
     color: var(--black);
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -228,6 +232,7 @@ b{
 .hero .hero-content .social-media{
     font-size: 30px;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -316,11 +321,13 @@ b{
     margin-top: 100px;
     margin-bottom: 240px;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     gap: 5.5rem;
 }
 .about .below{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 4.5rem;
 }
@@ -346,6 +353,7 @@ b{
 
 .about .details{
     display: flex;
+    flex-wrap: wrap;
     gap: 1.7rem;
     width: fit-content;
 }
@@ -365,6 +373,7 @@ b{
 
 .about .des{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     gap: 0.7rem;
     word-spacing: 7px;
@@ -381,6 +390,7 @@ b{
 }
 .about .below .des .social-media{
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
 }
 .about .below .des .social-media a{
@@ -432,6 +442,7 @@ b{
 
 .resume{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     max-width: 1140px;
     margin: 100px auto;
@@ -447,6 +458,7 @@ b{
 }
 .resume .work-exp{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
     position: relative;
@@ -486,6 +498,7 @@ b{
 
 .resume .work-exp .work-style-item{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     width: 47%;
     position: relative;
@@ -533,6 +546,7 @@ b{
 
 .services{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -553,6 +567,7 @@ b{
 }
 .services .services-content .services-content-item{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -593,6 +608,7 @@ b{
 
 .skills{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     flex-direction: column;
     align-items: center;
@@ -621,6 +637,7 @@ b{
     height: 160px;
     border-radius: calc(infinity * 1px);
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     background: conic;
@@ -673,6 +690,7 @@ b{
 }
 .skills .progress-line .progress{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     width: 48.5%;
     gap: 0.4rem;
@@ -680,6 +698,7 @@ b{
 }
 .skills .progress-line .progress .progress-heading{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 .skills .progress-line .progress .progress-bar-full-length{
@@ -761,6 +780,7 @@ b{
 
 .projects{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -795,6 +815,7 @@ b{
     background-size: cover;
     position: relative;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -869,6 +890,7 @@ b{
 
 .hire{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -901,6 +923,7 @@ b{
 
 .form-section{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 .form-section .image{
@@ -915,6 +938,7 @@ b{
 .form-section form{
     width: 40%;
     display: flex;
+    flex-wrap: wrap;
     margin: 95px auto;
     justify-content: start;
     flex-direction: column;
@@ -966,6 +990,7 @@ form input[type=submit]{
 
 footer{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     color: var(--white);
     background-color: rgb(9, 7, 34);
@@ -973,6 +998,7 @@ footer{
 }
 footer .left-section{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     gap: 1rem;
@@ -988,6 +1014,7 @@ footer b{
 }
 footer .contact{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     gap: 0.7rem;
