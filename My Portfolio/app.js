@@ -74,4 +74,27 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
+
+
+
+    // Progress Circle
+    const progressCircleElements = document.querySelectorAll('.progress');
+    progressCircleElements.forEach(progress => {
+        const percent = progress.getAttribute('data-percent');
+        progress.style.setProperty('--progress', percent);
+    });
+
+
+
+    // Progress Line
+    const progressLineElements = document.querySelectorAll(".progress-bar-half-length");
+
+    progressLineElements.forEach((progress) => {
+        const percent = progress.getAttribute('data-percent');
+        progress.style.width = `${percent}%`
+    })
+
+  
+
+
 });

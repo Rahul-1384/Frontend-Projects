@@ -3,23 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./images/fav.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+    <!-- Tracker On Top -->
     <div class="tracker"></div>
-    <nav class="navbar hero-animation">
+
+
+
+    <!-- Fixed Icon Section -->
+    <section class="download-resume-section">
+        <a href="./images/Rahul-Resume.pdf" class="download" download>
+            <i class="fa-solid fa-download" id="icon"></i>
+            <p class="showDes">Download Resume</p>
+        </a>
+        <a href="./images/Rahul-Resume.pdf" target="_blank" class="view">
+            <i class="fa-solid fa-eye" id="icon"></i>
+            <p class="showDes">View Resume</p>
+        </a>
+        <a href="#home" class="top">
+            <i class="fa-solid fa-house" id="icon"></i>
+            <p class="showDes">Home</p>
+        </a>
+    </section>
+
+    
+    
+    <!-- Navbar -->
+    <nav id="home" class="navbar hero-animation">
         <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Skills</a>
-        <a href="#">Contacts</a>
-        <a href="#">Work</a>
+        <a href="#about">About</a>
+        <a href="#my-resume">Resume</a>
+        <a href="#services">Services</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contacts">Contact</a>
     </nav>
 
 
     
+
+    <!-- Hero -->
     <section class="hero hero-animation">
         <div class="hero-content">
             <div class="image">
@@ -38,7 +65,9 @@
 
 
 
-    <section class="about">
+
+    <!-- About -->
+    <section id="about" class="about">
         <div class="heading">
             <p class="aboutme">About Me</p>
         </div>
@@ -73,7 +102,8 @@
 
 
 
-    <section class="resume">
+    <!-- Resume Details -->
+    <section id="my-resume" class="resume">
         <div class="heading">
             <p class="aboutme">My Resume</p>
         </div>
@@ -130,7 +160,8 @@
 
 
 
-    <seciton class="services">
+    <!-- Services -->
+    <seciton id="services" class="services">
         <div class="heading">
             <p class="aboutme">My Services</p>
         </div>
@@ -140,18 +171,330 @@
                     <i class="fa-solid fa-brush"></i>
                 </div>
                 <p class="role">Web Design</p>
-                <p class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum molestias temporibus eaque!</p>
+                <p class="des">I am a web designer, focusing on creating visually appealing, user-friendly, and accessible designs using tools like Figma. I also stay updated with modern design trends.</p>
             </div>
             <div class="services-content-item">
                 <div class="icon">
                     <i class="fa-solid fa-code"></i>
                 </div>
                 <p class="role">Web Development</p>
-                <p class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum molestias temporibus eaque!</p>
+                <p class="des">As a web developer, I build functional websites and applications, handling both frontend (HTML, CSS, JavaScript) and backend (Node.js, Express.js, MongoDB).</p>
+            </div>
+        </div>
+    </seciton>
+    
+
+
+
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="heading">
+            <p class="aboutme">Skills</p>
+        </div>
+        <div class="progress-circle">
+            <div class="progress left" data-percent="97">
+                <p>HTML</p>
+                <p>97%</p>
+            </div>
+            <div class="progress left" data-percent="95">
+                <p>CSS3</p>
+                <p>95%</p>
+            </div>
+            <div class="progress right" data-percent="93">
+                <p>JavaScript</p>
+                <p>93%</p>
+            </div>
+            <div class="progress right" data-percent="98">
+                <p>Tailwind</p>
+                <p>98%</p>
+            </div>
+            <div class="progress left" data-percent="98">
+                <p>Bootstrap</p>
+                <p>98%</p>
+            </div>
+            <div class="progress left" data-percent="97">
+                <p>React</p>
+                <p>97%</p>
+            </div>
+            <div class="progress right" data-percent="90">
+                <p>MongoDB</p>
+                <p>90%</p>
+            </div>
+            <div class="progress right" data-percent="94">
+                <p>Express.js</p>
+                <p>94%</p>
+            </div>
+            <div class="progress left" data-percent="96">
+                <p>Node.js</p>
+                <p>96%</p>
+            </div>
+            <div class="progress left" data-percent="89">
+                <p>Java</p>
+                <p>89%</p>
+            </div>
+            <div class="progress right" data-percent="86">
+                <p>C</p>
+                <p>86%</p>
+            </div>
+            <div class="progress right" data-percent="88">
+                <p>Python</p>
+                <p>88%</p>
             </div>
         </div>
         
-    </seciton>
+
+
+        <!-- progress line -->
+        <div class="progress-line">
+            <div class="progress aboutme">
+                <div class="progress-heading">
+                    <p>HTML</p>
+                    <p>97%</p>
+                </div>
+                <div class="progress-bar-full-length">
+                    <div class="progress-bar-half-length one"  data-percent="97"></div>
+                </div>
+            </div>
+            <div class="progress aboutme">
+                <div class="progress-heading">
+                    <p>CSS3</p>
+                    <p>95%</p>
+                </div>
+                <div class="progress-bar-full-length">
+                    <div class="progress-bar-half-length two"  data-percent="95"></div>
+                </div>
+            </div>
+            <div class="progress aboutme">
+                <div class="progress-heading">
+                    <p>JavaScript</p>
+                    <p>93%</p>
+                </div>
+                <div class="progress-bar-full-length">
+                    <div class="progress-bar-half-length three"  data-percent="93"></div>
+                </div>
+            </div>
+            <div class="progress aboutme">
+                <div class="progress-heading">
+                    <p>Tailwind</p>
+                    <p>98%</p>
+                </div>
+                <div class="progress-bar-full-length">
+                    <div class="progress-bar-half-length four"  data-percent="98"></div>
+                </div>
+            </div>
+            <div class="progress aboutme">
+                <div class="progress-heading">
+                    <p>Bootstrap</p>
+                    <p>98%</p>
+                </div>
+                <div class="progress-bar-full-length">
+                    <div class="progress-bar-half-length five"  data-percent="98"></div>
+                </div>
+            </div>
+            <div class="progress aboutme">
+                <div class="progress-heading">
+                    <p>React</p>
+                    <p>97%</p>
+                </div>
+                <div class="progress-bar-full-length">
+                    <div class="progress-bar-half-length six"  data-percent="97"></div>
+                </div>
+            </div>
+            <div class="progress aboutme">
+                <div class="progress-heading">
+                    <p>MongoDB</p>
+                    <p>90%</p>
+                </div>
+                <div class="progress-bar-full-length">
+                    <div class="progress-bar-half-length seven"  data-percent="90"></div>
+                </div>
+            </div>
+            <div class="progress aboutme">
+                <div class="progress-heading">
+                    <p>Express.js</p>
+                    <p>94%</p>
+                </div>
+                <div class="progress-bar-full-length">
+                    <div class="progress-bar-half-length eight"  data-percent="94"></div>
+                </div>
+            </div>
+            <div class="progress aboutme">
+                <div class="progress-heading">
+                    <p>Node.js</p>
+                    <p>96%</p>
+                </div>
+                <div class="progress-bar-full-length">
+                    <div class="progress-bar-half-length nine"  data-percent="96"></div>
+                </div>
+            </div>
+            <div class="progress aboutme">
+                <div class="progress-heading">
+                    <p>Java</p>
+                    <p>89%</p>
+                </div>
+                <div class="progress-bar-full-length">
+                    <div class="progress-bar-half-length ten"  data-percent="89"></div>
+                </div>
+            </div>
+            <div class="progress aboutme">
+                <div class="progress-heading">
+                    <p>C</p>
+                    <p>86%</p>
+                </div>
+                <div class="progress-bar-full-length">
+                    <div class="progress-bar-half-length eleven"  data-percent="86"></div>
+                </div>
+            </div>
+            <div class="progress aboutme">
+                <div class="progress-heading">
+                    <p>Python</p>
+                    <p>88%</p>
+                </div>
+                <div class="progress-bar-full-length">
+                    <div class="progress-bar-half-length twelve"  data-percent="88"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- My Projects -->
+    <section id="projects" class="projects">
+        <div class="heading">
+            <p class="aboutme">My Projects</p>
+        </div>
+        <div class="project-cards">
+            <!-- Project 1 -->
+            <div class="project-card-item aboutme">
+                <a href="https://generatepassword-07.netlify.app/" target="_blank">
+                    <div class="des password">
+                        <p class="name">Password Generator</p>
+                        <p class="category">Development</p>
+                    </div>
+                </a>
+            </div>
+            <!-- Project 2 -->
+            <div class="project-card-item aboutme">
+                <a href="https://knowtheweather07.netlify.app/" target="_blank">
+                    <div class="des weather">
+                        <p class="name">Weather App</p>
+                        <p class="category">Development</p>
+                    </div>
+                </a>
+            </div>
+            <!-- Project 3 -->
+            <div class="project-card-item aboutme">
+                <a href="https://crazyslider07.netlify.app/" target="_blank">
+                    <div class="des slider">
+                        <p class="name">Crazy Slider</p>
+                        <p class="category">Development</p>
+                    </div>
+                </a>
+            </div>
+            <!-- Project 4 -->
+            <div class="project-card-item aboutme">
+                <a href="http://127.0.0.1:5500/Image%20Gallery/index_1.html" target="_blank">
+                    <div class="des gallery">
+                        <p class="name">Image Gallery</p>
+                        <p class="category">Development</p>
+                    </div>
+                </a>
+            </div>
+            <!-- Project 5 -->
+            <div class="project-card-item aboutme">
+                <a href="https://tic-tac-t0e-07.netlify.app/" target="_blank">
+                    <div class="des tic-tac">
+                        <p class="name">Tic Tac Toe</p>
+                        <p class="category">Development</p>
+                    </div>
+                </a>
+            </div>
+            <!-- Project 6 -->
+            <div class="project-card-item aboutme">
+                <a href="https://w3schools-clone-07.netlify.app/" target="_blank">
+                    <div class="des w3-schools">
+                        <p class="name">W3 Schools Clone</p>
+                        <p class="category">Development</p>
+                    </div>
+                </a>
+            </div>
+            <!-- Project 7 -->
+            <div class="project-card-item aboutme">
+                <a href="https://razorpay-clone07.netlify.app/" target="_blank">
+                    <div class="des razorpay">
+                        <p class="name">Razorpay Clone</p>
+                        <p class="category">Development</p>
+                    </div>
+                </a>
+            </div>
+            <!-- Project 8 -->
+            <div class="project-card-item aboutme">
+                <a href="#">
+                    <div class="des portfolio">
+                        <p class="name">Portfolio</p>
+                        <p class="category">Development</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Hire -->
+    <section id="contacts" class="hire">
+        <p class="heading aboutme">Hire Me!</p>
+        <p class="des aboutme">I am a dedicated and experienced Full Stack MERN Developer with 1+ year of experience in designing and building robust, user-friendly web applications.</p>
+        <a href="#" class="aboutme">Contact Me</a>
+    </section>
+
+
+
+
+
+    <!-- Form -->
+    <section class="form-section">
+        <div class="image">
+            <img src="./images/form-bg.jpg" alt="">
+        </div>
+        <form action="https://formspree.io/f/mvggbege" method="POST">
+            <p class="heading">Contact</p>
+            <input name="Fname" type="text" required placeholder="Your Firstname">
+            <input name="Lname" type="text" required placeholder="Your Lastname">
+            <input name="Email" type="email" required placeholder="Your Email">
+            <input name="Subject" type="text" required placeholder="Subject">
+            <textarea name="Message" placeholder="Your Message"></textarea>
+            <input type="submit" value="Send Message">
+        </form>
+    </section>
+
+      
+      
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="left-section">
+            <p class="des">© 2024 All Rights Reserved. Designed by Rahul.</p>
+            <div class="social-media left">
+                <a href="https://www.linkedin.com/in/rahul1384/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/Rahul-1384" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:rahul001384@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+        <div class="contact">
+            <span>📞 <b>Get In Touch:</b> +91 74175 44234</span>
+            <span>✉️ <b>Mail:</b> rahul001384@gmail.com</span>
+            <address><b>🏢Address:</b> H no. 46, Nandanvan Colony,<br> Navada (NH-19), Mathura,<br> U.P, India</address>
+        </div>
+    </footer>
+
 
     <script src="app.js"></script>
 </body>
