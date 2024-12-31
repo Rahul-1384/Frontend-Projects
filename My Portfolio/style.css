@@ -315,6 +315,7 @@ b{
 
 
 
+
 .about{
     max-width: 1140px;
     margin: auto;
@@ -563,7 +564,7 @@ b{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    width: 1140px;
+    max-width: 1140px;
 }
 .services .services-content .services-content-item{
     display: flex;
@@ -622,7 +623,7 @@ b{
 }
 .skills .progress-circle{
     display: flex;
-    width: 1050px;
+    max-width: 1050px;
     margin: auto;
     flex-wrap: wrap;
     justify-content: space-between;
