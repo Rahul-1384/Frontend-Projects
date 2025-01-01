@@ -1353,6 +1353,10 @@ footer address{
     .menu-icon {
         display: flex;
     }
+
+    .projects .project-cards .project-card-item a .des .name{
+        font-size: 0.7rem;
+    }
     
 }
 
