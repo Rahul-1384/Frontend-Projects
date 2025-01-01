@@ -93,8 +93,19 @@ document.addEventListener("DOMContentLoaded", () => {
         const percent = progress.getAttribute('data-percent');
         progress.style.width = `${percent}%`
     })
-
   
+
+
+
+
+    const menuIcon = document.getElementById("menu-icon");
+    const menu = document.getElementById("menu");
+
+    menuIcon.addEventListener("click", () => {
+        menu.classList.toggle("show");
+        menuIcon.classList.toggle("active");
+    });
+
 
 
 });

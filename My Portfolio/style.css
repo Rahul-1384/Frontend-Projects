@@ -18,6 +18,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
 html{
     scroll-behavior: smooth;
 }
@@ -33,7 +38,7 @@ body{
     height: 2px;
     background-color: var(--red);
     position: fixed;
-    width: 100%;
+    max-width: 100%;
     top: 0;
     scale: 0 1;
     z-index: 1000;
@@ -53,6 +58,7 @@ body{
 .download, .view, .top{
     width: 40px;
     height: 40px;
+    background-color: var(--white);
     font-size: 20px;
     color: var(--black);
     display: flex;
@@ -122,29 +128,62 @@ body{
 
 
 
-.navbar{
+.navbar {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: fit-content;
     align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    max-width: 1140px;
-    margin: auto;
-    height: 50px;
+    padding: 10px 20px;
     position: relative;
-    z-index: 200;
-    opacity: 0;
-    filter: blur(20px);
-    scale: 0.5;
-    transition: all 0.7s;
+    z-index: 1000;
 }
-.navbar a{
-    margin-right: 40px;
+
+.navbar a {
     text-decoration: none;
-    color: var(--white);
-    letter-spacing: 2px;
-    font-weight: bold;
+    color: white;
+    font-size: 18px;
+    margin: 0 10px;
 }
+
+.menu {
+    display: flex;
+    /* opacity: 0; */
+    gap: 15px;
+    transition: transform 0.3s linear;
+    
+}
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-icon span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.menu-icon.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-icon.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-icon.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+
 
 
 .hero{
@@ -1022,4 +1061,451 @@ footer .contact{
 }
 footer address{
     text-align:right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 992px){
+    .skills .progress-line{
+        display: flex;
+        flex-wrap: wrap;
+        width: 740px;
+        justify-content: space-between;
+        align-items: center;
+        /* background-color: red; */
+        margin: auto;
+        font-size: 15px;
+    }
+    .projects .project-cards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 740px;
+    }
+    .projects .project-cards .project-card-item{
+        height: 200px;
+    }
+    .resume .work-exp{
+        max-width: 80%;
+    }
+    .about .below .des{
+        max-width: 80%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .navbar{
+        /* flex-direction: column; */
+        font-size: 0.5rem;
+    }
+    .hero-content{
+        font-size: 0.1rem;
+    }
+    .skills .progress-line{
+        display: flex;
+        flex-wrap: wrap;
+        width: 540px;
+        justify-content: space-between;
+        align-items: center;
+        /* background-color: red; */
+        margin: auto;
+        font-size: 0.8rem;
+    }
+    .projects .project-cards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 540px;
+    }
+    .projects .project-cards .project-card-item{
+        max-height: 150px;
+    }
+    .form-section .image{
+        display: none;
+    }
+    .form-section{
+        margin: 0;
+    }
+    .form-section form{
+        width: 500px;
+    }
+    footer{
+        gap: 2rem;
+    }
+    .resume .work-exp{
+        max-width: 80%;
+    }
+    .about .below .des{
+        max-width: 80%;
+    }
+}
+
+
+
+@media (max-width: 576px){
+    .navbar{
+        flex-direction: column;
+        height: fit-content;
+        /* gap: 0.2rem; */
+        /* margin: 1rem; */
+    }
+    .navbar a{
+        background-color: var(--orange);
+        width: 100%;
+        text-align: center;
+        /* margin: 0.1rem; */
+        padding: 10px;
+    }
+    .skills .progress-line{
+        display: flex;
+        flex-wrap: wrap;
+        width: 340px;
+        justify-content: space-between;
+        align-items: center;
+        /* background-color: red; */
+        margin: auto;
+        font-size: 0.6rem;
+    }
+    .projects .project-cards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        max-width: 400px;
+    }
+    .projects .project-cards .project-card-item{
+        max-height: 100px;
+    }
+    .about .below .details{
+        max-width: 90%;
+    }
+
+    .about .below .des{
+        max-width: 80%;
+    }
+    
+    .menu {
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #ff9800;
+        flex-direction: column;
+        align-items: center;
+        width: 200px;
+        border-radius: 5px;
+        padding: 10px 0;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        transform: translateX(100%); /* Hidden by default */
+        opacity: 0;
+        transition: all 0.4s linear;
+    }
+
+    .menu.show {
+        transform: translateX(40%); /* Show menu */
+        opacity: 1;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+    .resume .work-exp .work-style-item{
+        gap: 0.5rem;
+    }
+    .resume .work-exp{
+        max-width: 80%;
+    }
+   
+}
+
+
+
+
+@media (max-width: 413px){
+    .skills .progress-circle{
+        max-width: fit-content;
+        margin: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .projects .project-cards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        max-width: 400px;
+    }
+    .projects .project-cards .project-card-item{
+        max-height: 200px;
+        width: 40%;
+    }
+
+    .hire{
+        width: 250px;
+        justify-content: start;
+        margin: 2rem auto;
+    }
+    .hire .heading{
+        font-size: 2rem;
+        word-spacing: 7px;
+        letter-spacing: 3px;
+    }
+    .hire .des{
+        max-width: 100%;
+        font-size: 0.8rem;
+    }
+    .hire a{
+        padding: 7px 20px;
+        font-size: 1rem;
+    }
+
+
+    .form-section{
+        max-width: 300px;
+        margin: auto;
+    }
+
+    .resume{
+        margin: 0;
+    }
+    .resume .work-exp .right .logo{
+        position: absolute;
+        left: -12%;
+        font-size: 0.7rem;
+        padding: 4px;
+    }
+    .resume .work-exp .left .logo{
+        position: absolute;
+        right: -12%;
+        font-size: 0.7rem;
+        padding: 4px;
+    }
+    .resume .work-exp .role{
+        font-size: 0.8rem;
+    }
+    .resume .work-exp .company{
+        font-size: 0.5rem;
+        color: rgb(195, 195, 195);
+    }
+    .resume .work-exp .des{
+        font-size: 0.5rem;
+        color: rgb(94, 94, 94);
+    }
+    .hero .hero-content .name{
+        font-size: 2rem;
+    }
+
+    .resume{
+        margin: 0 auto;
+    }
+    .resume .work-exp{
+        max-width: 80%;
+    }
+    .resume .work-exp .work-style-item{
+        gap: 0.5rem;
+    }
+    .about .below .des{
+        font-size: 0.7rem;
+    }
+
+    .menu {
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #ff9800;
+        flex-direction: column;
+        align-items: center;
+        width: 200px;
+        border-radius: 5px;
+        padding: 10px 0;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        transform: translateX(100%); /* Hidden by default */
+        opacity: 0;
+        transition: all 0.4s linear;
+    }
+
+    .menu.show {
+        transform: translateX(40%); /* Show menu */
+        opacity: 1;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+    
+}
+
+
+
+
+
+@media (max-width: 367px){
+    .projects .project-cards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+    }
+    .projects .project-cards .project-card-item{
+        max-height: 70px;
+    }
+    .hero .hero-content .name{
+        font-size: 1.3rem;
+    }
+
+    .skills .progress-line{
+        width: 140px;
+        justify-content: center;
+        align-items: center;
+        gap: 0.1rem;
+        font-size: 0.4rem;
+    }
+
+    .skills .progress-circle .progress{
+        width: 100px;
+        height: 100px;
+    }
+
+    .skills .progress-circle .progress p:nth-child(1){
+        font-size: 0.7rem;
+        font-weight: 500;
+    }
+    .skills .progress-circle .progress p:nth-child(2){
+        font-size: 0.5rem;
+        color: var(--grey);
+    }
+
+    .hire{
+        width: 250px;
+        justify-content: start;
+        margin: 2rem auto;
+    }
+    .hire .heading{
+        font-size: 2rem;
+        word-spacing: 7px;
+        letter-spacing: 3px;
+    }
+    .hire .des{
+        max-width: 100%;
+        font-size: 1rem;
+    }
+    .hire a{
+        padding: 7px 20px;
+        font-size: 1rem;
+    }
+    .services{
+        margin: 0;
+    }
+    .services .services-content{
+        width: 100%;
+    }
+    .services .services-content .services-content-item .role{
+        font-size: 1.2rem;
+    }
+    .services .services-content .services-content-item .des{
+        font-size: 0.8rem;
+    }
+    .services .heading .aboutme{
+        font-size: 2rem;
+    }
+
+
+
+
+    .resume .work-exp .work-style-item{
+        gap: 0.5rem;
+    }
+    .resume .work-exp .right .logo{
+        position: absolute;
+        left: -15%;
+        font-size: 0.7rem;
+        padding: 4px;
+    }
+    .resume .work-exp .left .logo{
+        position: absolute;
+        right: -15%;
+        font-size: 0.7rem;
+        padding: 4px;
+    }
+    .resume .work-exp .role{
+        font-size: 0.6rem;
+    }
+    .resume .work-exp .company{
+        font-size: 0.4rem;
+        color: rgb(195, 195, 195);
+    }
+    .resume .work-exp .des{
+        font-size: 0.4rem;
+        color: rgb(94, 94, 94);
+    }
+
+    .about .aboutme{
+        font-size: 2rem;
+    }
+    .about .below .details .ask, .ans p{
+        font-size: 1rem;
+    }
+    .about .below .des p{
+        font-size: 0.9rem;
+    }
+    .about .below .details{
+        max-width: 50%;
+    }
+
+    .about .below .des{
+        max-width: 80%;
+    }
+}
+
+
+
+
+
+@media (max-width: 1360px){
+    body{
+        overflow: hidden;
+    }
+}
+
+
+
+
+@media (max-width: 1160px) {
+    .projects .project-cards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 840px;
+    }
+    
+    .projects .project-cards .project-card-item{
+        height: 200px;
+    }
+    
+    .about .below .des{
+        max-width: 80%;
+    }
 }
