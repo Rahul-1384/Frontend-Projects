@@ -1,0 +1,135 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --dark-blue: #0F172A;
+}
+
+.navbar{
+    position: fixed;
+    z-index: 1;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    font-size: 1.1rem;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.navbar a{
+    text-decoration: none;
+    border-radius: 8%;
+    padding: 0.4rem 1rem;
+    transition: all 0.2s linear;
+}
+.navbar a:hover{
+    background-color: #0d2f8045;
+    color: burlywood;
+}
+
+.hero{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(-160deg, #ff0000, var(--dark-blue), rgb(2, 2, 81), rgb(3, 44, 98));
+    height: 100vh;
+    align-items: center;
+    column-gap: 10rem;
+}
+.left-hero{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    line-height: 2.5rem;
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 1s linear;
+}
+.leftEffect{
+    opacity: 1;
+    transform: translateX(0);
+}
+.left-hero > * {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 1s ease;
+}
+
+.leftEffect > * {
+  opacity: 1;
+  transform: translateX(0);
+}
+.leftEffect > *:nth-child(1) {
+  transition-delay: 0.2s;
+}
+.leftEffect > *:nth-child(2) {
+  transition-delay: 0.4s;
+}
+.leftEffect > *:nth-child(3) {
+  transition-delay: 0.6s;
+}
+.left-hero > p{
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.left-hero h1{
+    font-size: 2.8rem;
+    line-height: 3rem;
+}
+.left-hero .hero-btns{
+    display: flex;
+    gap: 2rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+.hero-btns .hero-btn{
+    border-radius: 3rem;
+    padding: 0 1rem;
+    transition: all 0.1s linear;
+}
+.hero-btns #hero-btn-first{
+    background-color: rgba(237, 24, 5, 1);
+    border: 1px solid rgb(237, 24, 5);
+}
+.hero-btns #hero-btn-second{
+    border: 1px solid rgb(237, 24, 5);
+}
+.hero-btns #hero-btn-first:hover{
+    border: 1px solid rgb(237, 24, 5);
+    background-color: rgba(237, 24, 5, 0);
+}
+.hero-btns #hero-btn-second:hover{
+    background-color: rgba(237, 24, 5, 1);
+}
+.right-hero{
+    background-color:bisque;
+    height: 25rem;
+    width: 18rem;
+    background-image: url("photo2.jpg");
+    /* background-size: 50rem; */
+    background-size: 27rem;
+    /* background-position: -13rem -15rem; */
+    background-position: -5.5rem -8rem;
+    background-repeat: no-repeat;
+    border: 1rem solid;
+    border-image: linear-gradient(black, red);
+    border-image-slice: 1;
+    filter: blur(5rem);
+    opacity: 0;
+    scale: 0;
+    transition: all 0.5s linear 0.3s;
+}
+.image-animate{
+    filter: blur(0);
+    opacity: 1;
+    scale: 1;
+}
