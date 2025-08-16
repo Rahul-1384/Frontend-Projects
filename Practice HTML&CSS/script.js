@@ -35,13 +35,6 @@ const nextBtn = document.querySelector(".next");
 let imagesArray = ['photo1.jpg', 'photo2.jpg'];
 let currentIdx = 0;
 
-function nextSlide(){
-    currentIdx++;
-    if(currentIdx >= imagesArray.length){
-        currentIdx = 0;
-    }
-    showImage(currentIdx);
-}
 function prevSlide(){
     currentIdx--;
     if(currentIdx < 0){
@@ -49,12 +42,18 @@ function prevSlide(){
     }
     showImage(currentIdx);
 }
-function showImage(idx){
-    img.style.opacity = 0;
-    setTimeout(() => {
-        img.src = imagesArray[idx];
-        img.style.opacity = 1;
-    }, 300)
+
+function nextSldie(){
+    currentIdx++;
+    if(currentIdx >= imagesArray.length){
+        currentIdx = 0;
+    }
+    showImage(currentIdx);
 }
+
+function showImage(idx){
+    img.src = imagesArray[idx];
+}
+
 prevBtn.addEventListener('click', prevSlide);
-nextBtn.addEventListener('click', nextSlide);
+nextBtn.addEventListener('click', nextSldie);
