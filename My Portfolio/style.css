@@ -248,7 +248,7 @@ body{
     object-fit: cover;
     /* object-position: 55px 15px; */   /*Image*/
     /* object-position: 20px 30px; */   /*Image1*/
-    object-position: 0px -10px;
+    object-position: 5px 7px;
     scale: 1.1;
 }
 .hero .hero-content .name{
